@@ -10,6 +10,7 @@ function decipher(arr,n){
             }
         }
     }
+    // console.log(out)
     console.log(out)
 }
 decipher("a2n3l2",6)
