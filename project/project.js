@@ -98,6 +98,7 @@ gradesOfApplicant=false;
 applicantInterview :any[];
 selectedValue:String;
 data;
+previewData;
 gradesDropDown: any;
 
 
@@ -158,11 +159,15 @@ console.log(this.ApplicantData.selectGrade)
 
   submit(){
     if(this.interviewform.valid){
+      this.previewData = this.applicantInterview
+      console.log("total data:",this.previewData)
+
       console.log(this.interviewform)
     }
     console.log(this.interviewform.get('checkValue').value)
     console.log(this.interviewform.get('applicationNumber').value)
     console.log(this.interviewform.get('interviewerName').value)
+
 
   }
   changeSection(index: number) {
@@ -204,7 +209,9 @@ console.log(this.ApplicantData.selectGrade)
   
   this.applicantInterview.push(e)
   // console.log("array Data  :", this.applicantInterview)
-  return this.applicantInterview;
+  
+ 
+ console.log(this.applicantInterview)
   
   }
  
